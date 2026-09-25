@@ -1,5 +1,5 @@
 [project]
-name = "rein"
+name = "magewind"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.scripts]
-rein = "rein:main"
+magewind = "magewind:main"
 
 [build-system]
 requires = ["hatchling"]

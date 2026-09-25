@@ -1,4 +1,4 @@
-# rein
+# magewind
 
 An agent harness around the jev system-one model.
 
@@ -7,7 +7,7 @@ The Python version is the prototype. Once the structure is solid, it will be por
 ## Layout
 
 ```
-rein/
+magewind/
 ├── spec/                # language-neutral, shared by every implementation
 │   ├── fixtures/        # test cases as JSON: input -> expected output
 │   └── prompts/         # system prompts / instructions as plain text

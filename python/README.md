@@ -1,4 +1,4 @@
-# rein (Python prototype)
+# magewind (Python prototype)
 
 An agent harness around the jev system-one model. This is the Python prototype. See the [root README](../README.md) for the overall repo layout.
 
@@ -9,7 +9,7 @@ This project uses [uv](https://docs.astral.sh/uv/) to manage the Python version,
 ```sh
 uv sync          # create .venv and install everything from uv.lock
 uv run pytest    # run the tests
-uv run rein      # run the program
+uv run magewind  # run the program
 ```
 
 ## Common commands
@@ -17,7 +17,7 @@ uv run rein      # run the program
 | Command                  | What it does                                 |
 | ------------------------ | -------------------------------------------- |
 | `uv run pytest`          | Run the tests                                |
-| `uv run rein`            | Run `main()` in `src/rein/__init__.py`       |
+| `uv run magewind`        | Run `main()` in `src/magewind/__init__.py`   |
 | `uv add <package>`       | Add a dependency                             |
 | `uv add --dev <package>` | Add a dev-only dependency (e.g. test tools)  |
 | `uv run python`          | Open a Python prompt with the project loaded |
@@ -29,8 +29,8 @@ python/
 ├── pyproject.toml        # project config and dependency list
 ├── uv.lock               # exact installed versions (commit this)
 ├── .python-version       # pins Python 3.12
-├── src/rein/
-│   ├── __init__.py       # makes `rein` a package; main() lives here
+├── src/magewind/
+│   ├── __init__.py       # makes `magewind` a package; main() lives here
 │   ├── model.py          # Message type + ModelClient (the API wrapper)
 │   └── agent.py          # Agent class with a simple loop
 └── tests/test_agent.py   # a test that uses a fake client
@@ -49,7 +49,7 @@ python/
 1. **Get an API key.** Create one at https://console.typesafe.ai/ and set `TYPESAFE_API_KEY` in your environment. The SDK (`typesafe-sdk`) is already installed. Docs: https://docs.typesafe.ai/sdk/python/
 2. **Write `ModelClient`.** Wrap `TypeSafeClient.system_one(state=..., questions=...)`. Note that System One answers structured questions (`Noul`, `Choice`, `Score`) rather than chat messages, so reshape `Message` / `complete()` to fit.
 3. **Handle tool calls in `Agent.step()`.** See the TODO: inspect the reply, run any tools it asks for, and loop until the model is done.
-4. **Update `main()`** in `src/rein/__init__.py` to create an `Agent` and run a simple input loop.
+4. **Update `main()`** in `src/magewind/__init__.py` to create an `Agent` and run a simple input loop.
 5. **Add the LLM side.** Set `OPENAI_API_KEY` and follow the Pydantic plan below, using a Luna model (`gpt-5.6-luna` or `gpt-6-luna`).
 
 ## Learning Pydantic, step by step
@@ -72,4 +72,4 @@ Introduce one piece at a time, and keep the agent loop in `agent.py` your own.
 - Keep your API key in an environment variable or a `.env` file, never in code. `.env` is already in `.gitignore`.
 - Commit `uv.lock`. Don't commit `.venv/` (it's ignored).
 - Keep vendor-specific code in `model.py` so the rest of the harness stays easy to test.
-- Pydantic AI also has an `Agent` class. Import it with an alias (`from pydantic_ai import Agent as LLMAgent`) to avoid clashing with `rein.agent.Agent`.
+- Pydantic AI also has an `Agent` class. Import it with an alias (`from pydantic_ai import Agent as LLMAgent`) to avoid clashing with `magewind.agent.Agent`.

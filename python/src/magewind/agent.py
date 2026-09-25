@@ -1,6 +1,6 @@
 """The agent loop."""
 
-from rein.model import Message, ModelClient
+from magewind.model import Message, ModelClient
 
 
 class Agent:

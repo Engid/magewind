@@ -1,5 +1,5 @@
-from rein.agent import Agent
-from rein.model import Message, ModelClient
+from magewind.agent import Agent
+from magewind.model import Message, ModelClient
 
 
 class EchoClient(ModelClient):
