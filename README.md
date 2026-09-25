@@ -1,3 +1,7 @@
+> [!WARNING]
+> This project is a work in progress, and the Python version is only a prototype.
+> The API and structure may change significantly.
+
 # magewind
 
 An agent harness around the jev system-one model.
