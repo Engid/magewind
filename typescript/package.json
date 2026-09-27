@@ -1,0 +1,19 @@
+{
+  "name": "magewind",
+  "version": "0.1.0",
+  "description": "An agent harness around the Jev System One model",
+  "private": true,
+  "type": "module",
+  "keywords": ["agent", "llm", "harness", "ai"],
+  "homepage": "https://github.com/Engid/magewind#readme",
+  "bugs": {
+    "url": "https://github.com/Engid/magewind/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Engid/magewind.git",
+    "directory": "typescript"
+  },
+  "license": "Apache-2.0",
+  "author": "Nick Gideo <ngideo@gmail.com>"
+}

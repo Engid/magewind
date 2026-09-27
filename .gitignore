@@ -8,5 +8,8 @@ dist/
 # Rust
 target/
 
+# macOS
+.DS_Store
+
 # Secrets
 .env

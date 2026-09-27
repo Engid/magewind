@@ -15,18 +15,35 @@ magewind/
 ├── spec/                # language-neutral, shared by every implementation
 │   ├── fixtures/        # test cases as JSON: input -> expected output
 │   └── prompts/         # system prompts / instructions as plain text
+├── docs/                # design notes, research, and how to publish
 ├── python/              # Python prototype (uv project), see python/README.md
-└── rust/                # Rust port (not started yet)
+├── rust/                # Rust port (not started yet)
+└── typescript/          # possible Bun prototype (not started yet)
 ```
 
 ## Working in each language
 
-| Language | Folder    | Test command                      |
-| -------- | --------- | --------------------------------- |
-| Python   | `python/` | `cd python && uv run pytest`      |
-| Rust     | `rust/`   | `cd rust && cargo test` (planned) |
+| Language   | Folder        | Test command                                               |
+| ---------- | ------------- | ---------------------------------------------------------- |
+| Python     | `python/`     | `cd python && uv run pytest`                               |
+| Rust       | `rust/`       | `cd rust && cargo test` (planned)                          |
+| TypeScript | `typescript/` | `cd typescript && bun test` (if the Bun prototype happens) |
 
 Each language folder has its own tooling, dependencies, and README. The root only holds shared files.
+
+## Packages
+
+Nothing is published yet. Each language folder is set up as a real `magewind` package at 0.1.0, with a guard that blocks publishing until a release is ready. [docs/publishing.md](docs/publishing.md) covers account setup, the release checklist, and the commands.
+
+| Registry  | Package    | Source        | Publish guard                         |
+| --------- | ---------- | ------------- | ------------------------------------- |
+| PyPI      | `magewind` | `python/`     | `Private :: Do Not Upload` classifier |
+| crates.io | `magewind` | `rust/`       | `publish = false` in `Cargo.toml`     |
+| npm       | `magewind` | `typescript/` | `"private": true` in `package.json`   |
+
+## License
+
+[Apache License 2.0](LICENSE). Each package folder carries a copy of `LICENSE` so it ships inside the published package.
 
 ## Porting notes
 
