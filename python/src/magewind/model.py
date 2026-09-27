@@ -13,3 +13,8 @@ class ModelClient:
     def complete(self, messages: list[Message]) -> Message:
         # TODO: call the model API here and return its reply as a Message.
         raise NotImplementedError
+
+
+class EchoClient(ModelClient):
+    def complete(self, messages: list[Message]) -> Message: 
+        return Message(role="assistant", content=f"(echo) {messages[-1].content}")

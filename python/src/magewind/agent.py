@@ -14,3 +14,4 @@ class Agent:
         self.history.append(reply)
         # TODO: inspect reply for tool calls, run them, loop until done.
         return reply
+
