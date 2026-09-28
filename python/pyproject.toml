@@ -1,7 +1,7 @@
 [project]
 name = "magewind"
 version = "0.1.0"
-description = "An agent harness around the Jev System One model"
+description = "Coming soon."
 readme = "README.md"
 authors = [
     { name = "Nick Gideo", email = "ngideo@gmail.com" }
@@ -12,17 +12,13 @@ requires-python = ">=3.12"
 keywords = ["agent", "llm", "harness", "ai"]
 classifiers = [
     # Publish guard: PyPI rejects any upload with a "Private ::" classifier.
-    # Delete this line when you are ready to release (see docs/publishing.md).
+    # Delete this line when you are ready to release.
     "Private :: Do Not Upload",
     "Development Status :: 2 - Pre-Alpha",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.12",
 ]
-dependencies = [
-    "pydantic>=2.13.5",
-    "pydantic-ai-slim[openai]>=2.48.0",
-    "typesafe-sdk>=0.7.1",
-]
+dependencies = []
 
 [project.urls]
 Homepage = "https://github.com/Engid/magewind"

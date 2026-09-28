@@ -2,7 +2,7 @@
 name = "magewind"
 version = "0.1.0"
 edition = "2024"
-description = "An agent harness around the Jev System One model"
+description = "Coming soon."
 license = "Apache-2.0"
 repository = "https://github.com/Engid/magewind"
 homepage = "https://github.com/Engid/magewind"
@@ -11,7 +11,7 @@ keywords = ["agent", "llm", "harness", "ai", "cli"]
 categories = ["command-line-utilities", "development-tools"]
 include = ["/src", "/README.md", "/LICENSE"]
 # Publish guard: cargo refuses to publish while this is false.
-# Delete this line when you are ready to release (see docs/publishing.md).
+# Delete this line when you are ready to release.
 publish = false
 
 [dependencies]
